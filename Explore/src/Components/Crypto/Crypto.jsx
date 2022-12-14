@@ -22,7 +22,7 @@ function Crypto() {
 
     // console.log(result.data);
 
-    setData(result.data);
+    // setData(result.data);
   }
 
 

@@ -22,9 +22,9 @@ function Nasa() {
 
   const getNasaData = async () => {
 
-    // const result=await Axios.get(ApodApi);
-    // setData(result.data)
-    // console.log(result.data);
+    const result=await Axios.get(ApodApi);
+    setData(result.data)
+    console.log(result.data);
   }
 
   const handleClick = () => {
