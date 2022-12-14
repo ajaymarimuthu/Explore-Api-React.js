@@ -1,0 +1,44 @@
+h1{
+    color: #4694E2;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    font-weight: bolder;
+ 
+}
+.nasa{
+    background-image: url('../../images/nasa.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+img{
+    max-width: 40%;
+
+}
+
+.space-butttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid blue; */
+    padding: 4rem;
+    padding-bottom: 10rem;
+    
+}
+.btn{
+   /* background-color: red; */
+   /* padding: 2rem; */
+   width: 12rem;
+   margin: 1rem;
+   color: blue;
+  
+background: linear-gradient(0deg, rgba(34,64,195,1) 0%, rgba(255,255,255,1) 73%);
+
+}
+
+.space-data{
+    max-width: 75%;
+}

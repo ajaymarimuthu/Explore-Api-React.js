@@ -8,7 +8,7 @@ import Home from './Components/Home/Home';
 import Crypto from './Components/Crypto/Crypto';
 import Nasa from './Components/Nasa/Nasa'
 import Covid from './Components/Covid/Covid'
-import CryptoList from './Components/Crypto/CryptoList';
+import Login from './Components/Login/Login';
 function App() {
 
  
@@ -25,7 +25,8 @@ function App() {
           <Route path="/crypto" element={<Crypto/>}/>
           <Route path="/nasa" element={<Nasa/>}/>
           <Route path="/covid" element={<Covid/>}/>
-          <Route path="/cryptoList" element={<CryptoList/>}/>
+          <Route path="/login" element={<Login/>}/>
+          {/* <Route path="/cryptoList" element={<CryptoList/>}/> */}
         </Routes>
 
       </Router>

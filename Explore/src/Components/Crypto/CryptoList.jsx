@@ -4,7 +4,7 @@ function CryptoList({ cryptos }) {
     return (
         <div>
 
-            <Table striped bordered hover size="sm">
+            <Table striped bordered hover size="sm"  >
                 <thead>
                     <tr>
                         <th>#</th>
@@ -30,7 +30,7 @@ function CryptoList({ cryptos }) {
                             <td><img src={crypto.image} /></td>
                             <td>{crypto.total_supply}</td>
                             <td>{crypto.market_cap_rank}</td>
-                            <td>{crypto.total_vaolume}</td>
+                            <td>{crypto.total_volume}</td>
 
                         </tr>
                     ))}

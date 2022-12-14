@@ -18,9 +18,9 @@ function Crypto() {
 
   const getCryptos = async () => {
 
-    const result = await Axios.get(url);
+    // const result = await Axios.get(url);
 
-    console.log(result.data);
+    // console.log(result.data);
 
     setData(result.data);
   }
