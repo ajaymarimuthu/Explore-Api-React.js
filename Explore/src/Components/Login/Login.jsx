@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useRef,useState } from 'react'
 import { useFormik } from 'formik';
-// import './Form.css'
+ 
+import './Login.css'
+import Button from '@mui/material/Button';
 
 function Login() {
+
+    const [isLoggedIN, setIsLoggedIN] = useState(false)
+
+    const nameRef =useRef();
+        const emailRef =useRef();
+        const pwdRef =useRef();
 
     const initialValues = {
         name: '',
@@ -12,7 +20,15 @@ function Login() {
     }
 
     const onSubmit = values => {
-        console.log('Form data', values);
+        // console.log('Form data', values);
+      
+        setIsLoggedIN(true);
+        nameRef.current.value="";
+        emailRef.current.value="";
+        pwdRef.current.value="";
+
+        
+        // setIsLoggedIN(!islo);
     }
 
     const validate = values => {
@@ -41,7 +57,6 @@ function Login() {
             errors.password = 'Required'
         }
 
-
         return errors
     }
 
@@ -50,52 +65,50 @@ function Login() {
     console.log('visited:', formik.touched);
 
     return (
-        <div className='container'>
+        <div className='container-fluid'>
+           {isLoggedIN? <h1 style={{color:"green"}}>You are in  Buddy</h1> :  <h1>Login Form</h1>   }
+
+           
+
+
 
             <form className='form' onSubmit={formik.handleSubmit}>
 
-
-                <div>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id='name' name='name'
-                     onChange={formik.handleChange}
-                     onBlur={formik.handleBlur}
-                      value={formik.values.name} 
-                     />
-                    { formik.touched.name && formik.errors.name? <div className='error'>{formik.errors.name}</div> : null }
+                <div className='form-field'>
+                    <label htmlFor="name"></label>
+                    <input type="text" placeholder='Name' id='name' name='name'
+                    ref={nameRef}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.name}
+                    />
+                    {formik.touched.name && formik.errors.name ? <div className='error'>{formik.errors.name}</div> : null}
                 </div>
 
-                <div  >
+                <div  className='form-field'>
 
-                    <label htmlFor="email">E-mail</label>
-                    <input type="email" id='email' name='email'    onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.email} />
-                    {formik.touched.email &&  formik.errors.email? <div className='error'>{formik.errors.email}</div> : null }
-
-                </div>
-
-
-                <div  >
-
-
-                    <label htmlFor="password">Password</label>
-                    <input type="password" id='password' name='password'   onBlur={formik.handleBlur}   onChange={formik.handleChange} value={formik.values.password} />
-                    {formik.touched.password && formik.errors.password? <div className='error'>{formik.errors.password}</div> : null }
-
-
+                    <label htmlFor="email"></label>
+                    <input type="email" placeholder='E-mail:'  ref={emailRef}  id='email'
+                     name='email' 
+                     onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.email} />
+                     
+                    {formik.touched.email && formik.errors.mail ? <div className='error'>{formik.errors.email}</div> : null}
 
                 </div>
 
+                <div className='form-field' >
 
-
-                <button type='submit'>Submit</button>
-
-
-
+                    <label htmlFor="password"></label>
+                    <input type="password" placeholder='Password'  ref={pwdRef} id='password' name='password' onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.password} />
+                    {formik.touched.password && formik.errors.password ? <div className='error'>{formik.errors.password}</div> : null}
+ 
+                </div>
+  
+                {/* <button type='submit'>Submit</button> */}
+                <Button className='login-btn' type='submit' variant="contained" onClick={()=>{setIsLoggedIN(true)}}> LogIn </Button>
+ 
             </form>
-
  
- 
-
         </div>
     )
 }

@@ -234,7 +234,7 @@ import { Link } from 'react-router-dom';
 // // const settings=['Covid', 'Nasa', 'Crypto'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-const pages =  ['Covid', 'Nasa', 'Crypto'];
+const pages =  ['Covid', 'Nasa', 'Crypto','Login'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {

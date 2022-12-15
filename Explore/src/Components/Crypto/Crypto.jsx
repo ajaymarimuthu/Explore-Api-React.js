@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Axios from 'axios'
 import { useState } from 'react';
 import CryptoList from './CryptoList';
+// import CryptoList2 from './CryptoList2';
 
 function Crypto() {
 
@@ -32,14 +33,11 @@ function Crypto() {
     <div>
       In crypto
 
-      {/* <button onClick={handleFetch}>fetch</button> */}
-
-
-      {/* {data.map((crypto) => {
-        return <CryptoList crypto={crypto}/>
-      })} */}
+ 
 
       <CryptoList cryptos={data}/>
+
+      {/* <CryptoList2 cryptos={data} /> */}
 
 
     </div>

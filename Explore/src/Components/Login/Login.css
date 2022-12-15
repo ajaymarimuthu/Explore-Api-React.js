@@ -1,12 +1,33 @@
  
+.container-fluid{
+    /* border: 5px solid yellow; */
+    
+background: linear-gradient(0deg, rgba(17,29,83,1) 0%, rgba(255,255,255,1) 94%);
+padding-bottom: 18rem;
+}
 .form{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 100px auto;
+    margin: 50px auto;
+    /* border: 5px solid green;      */
+    /* padding: 1rem 0; */
+    /* border-radius: 2rem; */
  
+}
+
+
+input{
+border-radius: 2rem;
+border: none;
+padding: 0.5rem 1rem;
+}
+
+
+h1{
+    margin-top: 1rem
 }
 
 .form-control{
@@ -15,4 +36,12 @@
  
 .error{
     color: red;
+}
+
+.form-field{
+margin: 1rem;
+}
+
+.login-btn{
+    color: yellow;
 }

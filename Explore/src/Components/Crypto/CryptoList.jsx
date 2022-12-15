@@ -1,6 +1,6 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
-import { DataGrid } from '@mui/x-data-grid';
+// import { DataGrid } from '@mui/x-data-grid';
 function CryptoList({ cryptos }) {
     return (
         <div>
