@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import Axios from 'axios';
-import './Nasa.css'
+// import './Nasa.css'
 // import Button from 'react-bootstrap/Button';
 // import Card from 'react-bootstrap/Card';
 import NasaList from './NasaList';
@@ -28,11 +28,12 @@ function Nasa() {
 
   const getNasaData = async () => {
 
-    // const result=await Axios.get(ApodApi);
-    // const result1=await Axios.get(MarsPhotos);
+    const result=await Axios.get(ApodApi);
+    const result1=await Axios.get(MarsPhotos);
 
-    // setData(result.data)
-    // setPhotos(result1.data.photos)
+    setData(result.data)
+    setPhotos(result1.data.photos);
+    console.log(result1.data.photos);
  
   }
 
@@ -51,9 +52,7 @@ function Nasa() {
 
   return (
     <div className='nasa'>
-
  
-
       <NasaList data={data} photos={photos} handleClick={handleClick} handleMars={handleMars} MarsToggle={MarsToggle} toggle={toggle}/>
  
     </div>

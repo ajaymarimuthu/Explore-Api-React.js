@@ -1,26 +1,63 @@
 import React from 'react'
-import Box from '@mui/material/Box'; 
-import Grid from '@mui/material/Unstable_Grid2';
-import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
+ 
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+
 
 function MarsRover({ photos }) {
   return (
     <div>
-
-      {photos.map((photo) => {
-        return <img src={photo} />
-      })}  
+      <h1>Rover Details</h1>
 
 
-      {/* <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-          {Array.from(Array(photos.length/2)).map((_, index) => (
-            <Grid xs={2} sm={4} md={4} key={index}>
-              <Item>xs=2</Item>
-            </Grid>
-          ))}
-        </Grid>
-      </Box> */}
+
+      <ul>
+        {
+          photos.map((photo) => {
+            // return <div>
+            //   <li style={{color:"white"}}> {photo.earth_date} </li>
+            //   <li style={{color:"white"}}> <img src={photo.img_src} /></li>
+            //   <li style={{color:"white"}}> {photo.rover.name }  </li>
+            //   <li style={{color:"white"}}> {photo.rover.launch_date }  </li>
+            //   <li style={{color:"white"}}> {photo.rover.landing_date }  </li>
+            //   <li style={{color:"white"}}> {photo.rover.status }  </li>
+
+
+
+
+            // </div>
+
+            <Card sx={{ maxWidth: 345 }}>
+              <CardMedia
+                component="img"
+                alt="green iguana"
+                height="140"
+                image=  {photo.img_src}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                {photo.rover.name} 
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                {photo.rover.name }
+                {photo.rover.launch_date } 
+                {photo.rover.landing_date }
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Status:{photo.rover.status }</Button>
+                {/* <Button size="small">LaunchDAte</Button> */}
+              </CardActions>
+            </Card>
+          })
+        }
+
+      </ul>
+
 
     </div>
   )

@@ -1,15 +1,26 @@
 .home{
     /* border: 3px solid red; */
     font-family: Arial, Helvetica, sans-serif;
-color:#343a40;
+/* color:#343a40; */
+color: white;
 background: linear-gradient(0deg, rgba(17,29,83,1) 0%, rgba(255,255,255,1) 94%);
-padding-bottom: 20rem;
+ 
+
+
+background-image: url('../../images/nassa-2.jpg');
+background-repeat: no-repeat;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
  
   
 }
 
 p{
-    /* font-size: 18px; */
+    font-size: 20px;
+    font-weight: bolder;
     line-height: 2;
     /* letter-spacing:  ; */
 }
@@ -19,7 +30,7 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     /* border: 3px solid yellow; */
 }
 
@@ -31,12 +42,43 @@ h6{
 .home-list-item{
     text-decoration: none;
     list-style: none;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     font-weight: bolder;
 }
 
 .home-text{
     /* border: 2px solid red; */
-    margin: 50px auto;
+ 
     padding: 2rem;
 }
+
+
+.image-container{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+
+    transition-duration: 10000ms;
+
+  /* border: 2px solid red; */
+  max-width: 40%;
+    
+}
+
+.image-container:hover{
+    transform: rotate(360deg);
+    /* transform: ; */
+  
+}
+.image-container-item{
+    margin: 1rem;
+}
+
+.covid-img,.crypto-img,.nasa-img{
+    border-radius: 50%;
+    /* border: none; */
+}
+
+ 

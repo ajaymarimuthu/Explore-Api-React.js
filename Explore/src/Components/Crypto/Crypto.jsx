@@ -19,11 +19,11 @@ function Crypto() {
 
   const getCryptos = async () => {
 
-    // const result = await Axios.get(url);
+    const result = await Axios.get(url);
 
-    // console.log(result.data);
+    console.log(result.data);
 
-    // setData(result.data);
+    setData(result.data);
   }
 
 
@@ -31,10 +31,8 @@ function Crypto() {
   return (
 
     <div>
-      In crypto
-
  
-
+ 
       <CryptoList cryptos={data}/>
 
       {/* <CryptoList2 cryptos={data} /> */}

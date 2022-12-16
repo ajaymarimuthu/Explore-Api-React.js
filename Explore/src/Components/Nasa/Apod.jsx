@@ -1,20 +1,20 @@
 import React from 'react'
-import './Nasa.css'
-
+// import './Nasa.css'
+import './Apod.css'
 
 import Card from 'react-bootstrap/Card';
 
 function Apod({data}) {
     return (
-        <div className='nasa'>
+     
  
-            <div className='space-data'>
+            <div className='apod'>
 
-                <Card className="text-center">
+                <Card className="apod-card">
                     <Card.Header><h1>{data.date}</h1></Card.Header>
-                    <Card.Body>
+                    <Card.Body className='apod-text'>
                         <Card.Title>{data.title}</Card.Title>
-                        <Card.Text>
+                        <Card.Text >
                             {data.explanation}
                         </Card.Text>
                         <img src={data.hdurl} />
@@ -24,7 +24,6 @@ function Apod({data}) {
 
             </div>
  
-        </div>
     )
 }
 

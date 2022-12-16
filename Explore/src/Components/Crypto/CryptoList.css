@@ -1,3 +1,27 @@
-img{
-    max-width: 100%;
+.crypto-table{
+    padding: 1rem;
+}
+.crypto-img{
+    max-width: 25%;
+}
+
+
+.crypto-item{
+    text-align: center;
+    
+}
+
+.thead{
+    border: 10px solid #1c7ed6;
+    text-align: center;
+    font-size: larger;
+ 
+}
+/* .thead-heading{
+    border: 2px solid rebeccapurple;
+       padding: 1rem;
+} */
+
+.tbody{
+    border: 2px soldi red;
 }

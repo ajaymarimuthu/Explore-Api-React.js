@@ -1,8 +1,8 @@
 import React, { useEffect,useState } from 'react'
 import Axios from 'axios';
 import { DataGrid } from '@mui/x-data-grid';
-// import CovidList from './CovidList';
-import Table from '@mui/material/Table';
+import "./CovidList.css";
+// import Table from '@mui/material/Table';
 
 function Covid() {
 
@@ -18,7 +18,6 @@ function Covid() {
    
   ];
 
-
   const Api=`https://api.rootnet.in/covid19-in/stats/latest`;
 
   const [data, setData] = useState([])
@@ -29,14 +28,14 @@ function Covid() {
 
   const getCovidDetails = async() =>{
 
-    // const result=await Axios.get(Api);
+    const result=await Axios.get(Api);
     // console.log(result.data.data);
 
-    // setData(result.data.data.regional);
+    setData(result.data.data.regional);
     
  
 
-    // console.log(result.data.data.regional);
+    console.log(result.data.data.regional);
 
   }
   const getRowId = (row) =>{
@@ -46,14 +45,16 @@ function Covid() {
   }
 
   return (
-    <div>
+    <div  >
+
+      <h1>Covid-19 Information</h1>
  
 
      {/* <CovidList data={data}/> */}
     
-     <div style={{ height: 1000, width: '100%' }}>
+     <div className='table-header'  style={{ height: 1000, width: '100%' }}>
  
-      <DataGrid className='table-header'
+      <DataGrid
         rows={data}
         getRowId={(row) => row.totalConfirmed}
         columns={columns}
